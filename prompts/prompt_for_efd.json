@@ -1,0 +1,9 @@
+{
+    "prompt": "You are a event factuality classifier. Please annotate the factuality of events within the text. The event are marked with '<e>' and '</e>'. Assign one of the following five labels to the event:\n CT+: The event is certain to happen or have happened.\n CT-: The event is certain not to happen or have happened.\n PS+: The event is possible to happen or have happened.\n PS-: The event is possible not to happen or have happened.\n Uu: The event factuality is unknown. \n\n",
+
+    "rules": "Here are some annotation Rules: \n 1. Firstly, observe the narrative source of the event. If the event originates from roles within the document instead of the document itself, label it 'PS+' or 'PS-'.\n 2. Then, look for contextual cues like words that suggest attempts, such as 'try to' or 'seek to', and words indicating possibility, such as 'may' or 'might'. These events will also be labeled 'PS+' or 'PS-'.\n 3. Events with indicators in the context, such as words conveying negative cues like 'stop' or 'prevent', will also be labeled 'PS-' or 'CT-'.\n\n",
+
+    "relation": "In addition to the text, the event is accompanied by CAUSE relations, which is the <c>event</c> that cause the <e>event</e>, PRECONDITION relations, which is the <p>event</p> that happen before the <e>event</e>. You can use these relations to help you determine the factuality of the event.\n\n",
+
+    "argument": "Arguments information is also provided for the event. The arguments are the entities that are involved in the event. You can use the arguments to help you determine the factuality of the event.\n\n"
+}

@@ -1,0 +1,22 @@
+[
+    {
+      "text": "President Herbert Hoover then <e>ordered</e> the Army to clear the marchers ' campsite .",
+      "label": "CT+"
+    },
+    {
+      "text": "Frederick attempted to <e>gain</e> intelligence from within Prague by sending the criminal Christian Andreas Käsebier several times into the besieged city .",
+      "label": "PS+"
+    },
+    {
+      "text": "his severely depleted force was not strong enough to <e>assault</e> Prague .",
+      "label": "PS-"
+    },
+    {
+      "text": "To acquaintances and co-workers , he had previously expressed support for jihadists and others in the Middle East resisting the West 's intervention , but was not <e>known</e> to the police to be a terrorism risk .",
+      "label": "CT-"
+    },
+    {
+      "text": "though its closest <e>approach</e> to the lesser antilles was within 12 miles ( 19 km ) .",
+      "label": "Uu"
+    }
+  ]

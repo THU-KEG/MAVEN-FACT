@@ -1,0 +1,50 @@
+**Task Description:**
+
+You are given a list of tokens representing a sentence containing an event. The event is marked with `<{factuality}>` and `</{factuality}>`, where `factuality` indicates the factuality of the event. The possible values for factuality are:
+- CT+ (certainly happened)
+- CT- (certainly did not happen)
+- PS+ (possibly happened)
+- PS- (possibly did not happen)
+
+Your task is to generate an output list similar to a Named Entity Recognition (NER) output. Each element in the output list should correspond to an element in the token list. Use the following tags:
+- 'O' for tokens that are not part of an evidential basis.
+- 'B' for the beginning of an evidential basis.
+- 'I' for the inside of an evidential basis.
+
+For example:
+
+**Input:**
+```python list
+['Webster', "'s", 'confession', 'did', 'not', '<CT->', 'match', '</CT->', 'the', 'forensic', 'evidence', '.']
+```
+**Output:**
+```python list
+['O', 'O', 'O', 'B', 'I', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+```
+In this case, the event is "match", its factuality is "CT-", and the evidential basis is "did not".
+
+If there are multiple evidential basis words in a sentence, mark each appropriately. For example:
+
+**Input:**
+```python list
+['Neither', 'damages', 'nor', '<CT->', 'fatalities', '</CT->', 'were', 'reported', 'during', 'that', 'time', '.']
+```
+**Output:**
+```python list
+['B', 'O', 'B', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+```
+In this case, the event is "fatalities", its factuality is "CT-", and the evidential basis is "neither" and "nor".
+
+**Instructions:**
+
+1. Carefully analyze the input sentence and identify the event marked by `<{factuality}>` and `</{factuality}>`.
+2. Identify the evidential basis words that support the factuality of the event.
+3. Generate the output list with 'O', 'B', and 'I' tags according to the given rules.
+
+
+Ensure your output matches the format and corresponds accurately to the input token list.
+**Input:**
+```python list
+[INSERT TOKEN LIST HERE]
+```
+**Output:**

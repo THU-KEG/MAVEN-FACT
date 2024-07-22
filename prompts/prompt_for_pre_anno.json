@@ -1,0 +1,9 @@
+{
+    "task_definition": "You are required to annotate the factuality of events within the provided document. The event trigger words are marked with '(**' and '**)' for your reference. Assign one of the following two labels to each event based on its context:\n", 
+    "label_definition": " CT+: The event is definitely certain to happen or have happened.\n OT: Other factuality, including but not limited to, certain not to happen or have happened, possible to happen or have happened, etc.\n\n", 
+    "rules": "Annotation Rules:\n 1. Firstly, observe the narrative source of the event. If the event originates from roles within the document, label it OT.\n 2. Then, look for contextual cues like words that suggest attempts, such as 'try to' or 'seek to', and words indicating possibility, such as 'may' or 'might'. These events will also be labeled OT.\n 3. Events with indicators in the context, such as words conveying negative cues like 'stop' or 'prevent', will also be labeled OT.\n 4.If at this stage, you still cannot determine the factual certainty of an event, prioritize labeling it as OT.\n\n", 
+    "input_prefix": "Document: \n", 
+    "input_suffix": "\n\nThe output should be the same document with factuality label assigned behind each event trigger word. Do not output any other information.\n", 
+    "output_example": "\nExample: \nDocument: \nThe company (**announced**) that it will (**launch**) a new product next month. \nOutput: \nThe company (**announced**)(CT+) that it will (**launch**)(OT) a new product next month. \n", 
+    "model": "gpt-3.5-turbo"
+}

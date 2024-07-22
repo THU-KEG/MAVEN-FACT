@@ -1,0 +1,7 @@
+numpy==2.0.0
+openai==1.36.0
+scikit_learn==1.4.2
+seqeval==1.2.2
+torch==2.2.1+cu121
+tqdm==4.66.2
+transformers==4.40.0
